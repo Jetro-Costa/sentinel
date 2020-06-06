@@ -31,7 +31,7 @@ Update system packages and ensure virtualenv is installed:
     $ sudo apt-get update
     $ sudo apt-get -y install python-virtualenv
 
-Make sure the local MarteX Core daemon running is at least version 3.0.6.1-a4933cd-dirty (3000601)
+Make sure the local MarteX Core daemon running is at least version 12.1 (120100)
 
     $ martex-cli getinfo | grep version
 
