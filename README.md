@@ -22,7 +22,7 @@ These instructions cover installing Sentinel on Ubuntu 16.04 / 18.04.
 
 ### Dependencies
 
-Make sure Python version 2.7.x or above is installed:
+Make sure git and Python version 2.7.x or above is installed:
 
     python --version
 
