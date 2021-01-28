@@ -1,9 +1,9 @@
 #!/bin/bash
 set -evx
 
-mkdir ~/.martecore
+mkdir ~/.martexcore
 
 # safety check
-if [ ! -f ~/.martecore/.marte.conf ]; then
-  cp share/marte.conf.example ~/.martecore/marte.conf
+if [ ! -f ~/.martexcore/.MarteX.conf ]; then
+  cp share/marte.conf.example ~/.martexcore/.MarteX.conf
 fi
