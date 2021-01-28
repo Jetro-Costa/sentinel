@@ -40,7 +40,7 @@ Make sure the local MarteX Core daemon running is at least version v4.0.2.1-8ab8
 Clone the Sentinel repo and install Python dependencies.
 
     $ git clone https://github.com/martexcoin/sentinel.git && cd sentinel
-    $ virtualenv -p $(which python3 ./venv
+    $ virtualenv -p $(which python3) ./venv
     $ ./venv/bin/pip install -r requirements.txt
 
 ## Usage
