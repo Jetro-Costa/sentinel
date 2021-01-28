@@ -22,14 +22,14 @@ These instructions cover installing Sentinel on Ubuntu 16.04 / 18.04.
 
 ### Dependencies
 
-Make sure Python version 2.7.x or above is installed:
-
-    python --version
-
 Update system packages and ensure virtualenv is installed:
 
     $ sudo apt-get update
-    $ sudo apt-get -y install python-virtualenv
+    $ sudo apt-get -y install git python3 virtualenv
+    
+Make sure Python version 3.6.x or above is installed:
+
+    python3 --version
 
 Make sure the local MarteX Core daemon running is at least version v4.0.2.1-8ab84aa-dirty (4000201)
 
@@ -40,7 +40,7 @@ Make sure the local MarteX Core daemon running is at least version v4.0.2.1-8ab8
 Clone the Sentinel repo and install Python dependencies.
 
     $ git clone https://github.com/martexcoin/sentinel.git && cd sentinel
-    $ virtualenv ./venv
+    $ virtualenv -p $(which python3 ./venv
     $ ./venv/bin/pip install -r requirements.txt
 
 ## Usage
