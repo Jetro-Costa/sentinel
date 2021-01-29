@@ -19,7 +19,7 @@ import misc
 
 pr = Proposal(
     name='proposal7',
-    url='https://martexcoin.com/proposal7',
+    url='https://martexcoin.org/proposal',
     payment_address='yTC62huR4YQEPn9AJHjnQxxreHSbgAoatV',
     payment_amount=39.23,
     start_epoch=1483250400,
