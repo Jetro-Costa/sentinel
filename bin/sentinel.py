@@ -30,7 +30,7 @@ def prune_expired_proposals(martexd):
         proposal.vote(martexd, VoteSignals.delete, VoteOutcomes.yes)
 
 
-# ping martexd
+# ping martexd mantido ainda na martex core
 def sentinel_ping(martexd):
     printdbg("in sentinel_ping")
 
@@ -124,6 +124,11 @@ def main():
     martexd = MarteXDaemon.from_martex_conf(config.martex_conf)
     options = process_args()
 
+    # print version and return if "--version" is an argument
+    if options.version:
+        print("martexd Sentinel v%s" % config.sentinel_version)
+        return
+
     # check martexd connectivity
     if not is_martexd_port_open(martexd):
         print("Cannot connect to martexd. Please ensure martexd is running and the JSONRPC port is open to Sentinel.")
@@ -201,6 +206,9 @@ def process_args():
                         action='store_true',
                         help='Bypass scheduler and sync/vote immediately',
                         dest='bypass')
+    parser.add_argument('-v', '--version',
+                        action='store_true',
+                        help='Print the version (MarteX Sentinel vX.X.X) and exit')
     args = parser.parse_args()
 
     return args
